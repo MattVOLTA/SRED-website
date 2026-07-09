@@ -3,88 +3,232 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SR&ED Setup Dashboard</title>
-  <link rel="stylesheet" href="./styles.css">
+  <title>SR&amp;ED Operating System | Volta</title>
+  <meta name="description" content="A Volta-styled landing page for the SR&amp;ED operating system for early-stage software founders in Atlantic Canada.">
+  <link rel="stylesheet" href="./landing.css">
 </head>
 <body>
   <div class="rainbow-rule"></div>
 
-  <header class="hero">
-    <div class="brand-row">
-      <img src="./assets/volta-logo-white.png" alt="Volta" class="brand-logo">
-      <div class="claim-period">14 day implementation plan</div>
-    </div>
-
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <div class="eyebrow">SR&ED operating system</div>
-        <h1>Setup dashboard</h1>
-        <p class="hero-lede">Inventory the evidence sources, connect priority systems, test the scan rhythm, and prepare a reviewed workspace for advisor input.</p>
-      </div>
-
-      <section class="progress-panel" aria-labelledby="overall-progress-label">
-        <div id="overall-progress-label" class="panel-label">Overall progress</div>
-        <div class="progress-value"><span id="complete-count">0</span><span class="progress-total">/ <span id="total-count">0</span> tasks</span></div>
-        <div class="progress-bar" aria-hidden="true">
-          <div id="overall-progress-fill" class="progress-fill"></div>
-        </div>
-        <div id="progress-note" class="progress-note">No tasks completed yet.</div>
-      </section>
-    </div>
+  <header class="site-header" aria-label="Page header">
+    <a class="brand-mark" href="#top" aria-label="Volta SR&amp;ED operating system">
+      <img src="./assets/volta-logo-white.png" alt="Volta">
+    </a>
+    <nav class="top-nav" aria-label="Primary navigation">
+      <a href="#use">How to use it</a>
+      <a href="#outputs">Outputs</a>
+      <a href="#guardrails">Guardrails</a>
+    </nav>
+    <a class="header-action" href="./dashboard.html">View 14-day Setup Dashboard</a>
   </header>
 
-  <main class="page-shell">
-    <section class="dashboard-band" aria-labelledby="dashboard-title">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Dashboard</div>
-          <h2 id="dashboard-title">Workstreams</h2>
+  <main id="top">
+    <section class="hero-section">
+      <div class="hero-shell">
+        <div class="hero-copy">
+          <div class="eyebrow">For Atlantic Canadian software founders</div>
+          <h1>SR&amp;ED operating system for evidence-first teams</h1>
+          <p class="hero-lede">A practical workspace for preserving technical facts, source evidence, approvals, and advisor-ready drafts while your startup is still building.</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button github" href="https://github.com/MattVOLTA/SRED-toolkit" target="_blank" rel="noreferrer">
+              <svg class="github-mark" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.6 7.6 0 0 1 8 3.86c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+              </svg>
+              Clone on GitHub
+            </a>
+          </div>
         </div>
-        <div class="actions">
-          <button id="show-all" type="button">All</button>
-          <button id="expand-all" type="button">Expand all</button>
-          <button id="collapse-all" type="button">Collapse all</button>
-          <button id="reset-progress" type="button" class="ghost-danger">Reset</button>
-        </div>
+
+        <aside class="operating-panel" aria-label="Operating loop overview">
+          <div class="panel-topline">
+            <span class="panel-label">Operating loop</span>
+            <span class="panel-status">Human reviewed</span>
+          </div>
+          <ol class="loop-list">
+            <li>
+              <span>01</span>
+              <strong>Map the company surface</strong>
+              <p>Repos, tickets, docs, evals, payroll, cloud, customer restrictions, and owners.</p>
+            </li>
+            <li>
+              <span>02</span>
+              <strong>Collect source-backed signals</strong>
+              <p>Evidence cards point back to dated artifacts instead of replacing them.</p>
+            </li>
+            <li>
+              <span>03</span>
+              <strong>Separate routine work</strong>
+              <p>Product delivery, support, demos, sales, and normal implementation stay visible but separate.</p>
+            </li>
+            <li>
+              <span>04</span>
+              <strong>Prepare the advisor package</strong>
+              <p>Approved facts, finance support, privacy decisions, and open questions land in one binder.</p>
+            </li>
+          </ol>
+        </aside>
       </div>
-      <div id="category-grid" class="category-grid" aria-live="polite"></div>
     </section>
 
-    <section class="days-band" aria-labelledby="days-title">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Plan</div>
-          <h2 id="days-title">Day by day execution</h2>
-        </div>
-        <div id="active-filter" class="active-filter">Showing all workstreams</div>
+    <section class="metrics-band" aria-label="Repository snapshot">
+      <div class="metrics-grid">
+        <article class="metric-card">
+          <div class="metric-value">5</div>
+          <div class="metric-label">Operating phases</div>
+        </article>
+        <article class="metric-card">
+          <div class="metric-value">14</div>
+          <div class="metric-label">Day setup plan</div>
+        </article>
+        <article class="metric-card">
+          <div class="metric-value">17</div>
+          <div class="metric-label">Workflow skills</div>
+        </article>
+        <article class="metric-card">
+          <div class="metric-value">61</div>
+          <div class="metric-label">Workspace templates</div>
+        </article>
       </div>
-      <div id="days-list" class="days-list"></div>
     </section>
 
-    <section class="claim-band" aria-labelledby="claim-title">
+    <section class="content-section founder-section" aria-labelledby="founder-title">
       <div class="section-head">
-        <div>
-          <div class="eyebrow">Phase gates</div>
-          <h2 id="claim-title">What each checkpoint means</h2>
-        </div>
+        <div class="eyebrow">Why it exists</div>
+        <h2 id="founder-title">Built for the founder who cannot afford a year-end archaeology project</h2>
+        <p>Most early-stage software teams know the hard technical work when it happens. By filing season, the source links, eval failures, tradeoffs, and approvals are scattered across tools. This repo gives the team a small operating rhythm before that context disappears.</p>
       </div>
-      <div class="exit-grid">
-        <article>
-          <div class="exit-label">Setup handoff</div>
-          <p>Priority sources have owners, scopes, access methods, sensitivity rules, privacy paths, and visible blockers.</p>
+
+      <div class="story-grid">
+        <article class="story-card">
+          <div class="story-number">01</div>
+          <h3>During the sprint</h3>
+          <p>Capture technical uncertainty, experiments, failures, model evals, decisions, and the evidence that proves when they happened.</p>
         </article>
-        <article>
-          <div class="exit-label">Testing proof</div>
-          <p>Daily and weekly scans run on approved sources, produce useful output, and record misses, noise, and privacy issues.</p>
+        <article class="story-card">
+          <div class="story-number">02</div>
+          <h3>During the month</h3>
+          <p>Review what is accepted, excluded, weak, blocked, sensitive, or waiting on finance, privacy, CTO, or advisor input.</p>
         </article>
-        <article>
-          <div class="exit-label">Advisor prep</div>
-          <p>Evidence, finance support, privacy decisions, approvals, and open advisor questions are visible before any handoff.</p>
+        <article class="story-card">
+          <div class="story-number">03</div>
+          <h3>Before advisor review</h3>
+          <p>Hand over a clean binder with source-backed narratives, cost support, privacy decisions, approval status, and unresolved questions.</p>
         </article>
+      </div>
+    </section>
+
+    <section class="content-section use-section" id="use" aria-labelledby="use-title">
+      <div class="section-head compact">
+        <div class="eyebrow">How to use it</div>
+        <h2 id="use-title">Start with the company, then let evidence drive the story</h2>
+      </div>
+
+      <div class="steps-list">
+        <article class="step-row">
+          <span>01</span>
+          <div>
+            <h3>Confirm the company and claim period</h3>
+            <p>Fill in the company profile, fiscal period, owners, policy refresh status, and human approval gates.</p>
+            <a href="https://github.com/MattVOLTA/SRED-toolkit/blob/main/sred-ops/company-profile.md" target="_blank" rel="noreferrer">company-profile.md</a>
+          </div>
+        </article>
+        <article class="step-row">
+          <span>02</span>
+          <div>
+            <h3>Map systems of record before scanning</h3>
+            <p>List the repos, tickets, docs, eval systems, payroll, accounting, and customer evidence restrictions that matter.</p>
+            <a href="https://github.com/MattVOLTA/SRED-toolkit/blob/main/sred-ops/inventory-runbook.md" target="_blank" rel="noreferrer">inventory-runbook.md</a>
+          </div>
+        </article>
+        <article class="step-row">
+          <span>03</span>
+          <div>
+            <h3>Run the founder and CTO intake</h3>
+            <p>Turn hard technical work, failed paths, customer context, and routine exclusions into reviewable notes.</p>
+            <a href="https://github.com/MattVOLTA/SRED-toolkit/blob/main/sred-ops/first-time-founder-intake.md" target="_blank" rel="noreferrer">first-time-founder-intake.md</a>
+          </div>
+        </article>
+        <article class="step-row">
+          <span>04</span>
+          <div>
+            <h3>Track projects, uncertainties, experiments, and AI evals</h3>
+            <p>Connect each technical unknown to attempts, tests, datasets, metrics, failure analysis, and dated source artifacts.</p>
+            <a href="https://github.com/MattVOLTA/SRED-toolkit/blob/main/sred-ops/experiment-ledger.md" target="_blank" rel="noreferrer">experiment-ledger.md</a>
+          </div>
+        </article>
+        <article class="step-row">
+          <span>05</span>
+          <div>
+            <h3>Review people, finance, privacy, and exclusions</h3>
+            <p>Keep costs, locations, grants, cloud usage, customer data, sensitive IP, and routine work visible for human review.</p>
+            <a href="https://github.com/MattVOLTA/SRED-toolkit/blob/main/sred-ops/finance-evidence-ledger.md" target="_blank" rel="noreferrer">finance-evidence-ledger.md</a>
+          </div>
+        </article>
+        <article class="step-row">
+          <span>06</span>
+          <div>
+            <h3>Build the binder from approved facts only</h3>
+            <p>Package the claim period for a CPA or SR&amp;ED specialist without hiding weak evidence or unresolved advisor questions.</p>
+            <a href="https://github.com/MattVOLTA/SRED-toolkit/blob/main/sred-ops/final-review-binder.md" target="_blank" rel="noreferrer">final-review-binder.md</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section outputs-section" id="outputs" aria-labelledby="outputs-title">
+      <div class="section-head">
+        <div class="eyebrow">What it produces</div>
+        <h2 id="outputs-title">A source-linked workspace that can survive scrutiny</h2>
+        <p>Each artifact exists to answer a question the claim process will eventually ask. The repo keeps facts, interpretation, approvals, and sensitive raw material in separate lanes.</p>
+      </div>
+
+      <div class="output-grid">
+        <article class="output-card">
+          <h3>Claim question index</h3>
+          <p>The founder control board for what is answered, blocked, excluded, or waiting for human review.</p>
+        </article>
+        <article class="output-card">
+          <h3>Evidence index and cards</h3>
+          <p>Dated artifacts from Git, tickets, evals, docs, meetings, logs, finance, and payroll stay traceable.</p>
+        </article>
+        <article class="output-card">
+          <h3>Experiment ledger</h3>
+          <p>Hypotheses, attempts, tests, results, and conclusions stay tied to the technical unknown being investigated.</p>
+        </article>
+        <article class="output-card">
+          <h3>AI eval register</h3>
+          <p>Models, prompts, datasets, baselines, thresholds, metrics, traces, and failure patterns are captured while fresh.</p>
+        </article>
+        <article class="output-card">
+          <h3>Time and finance ledgers</h3>
+          <p>People, contractors, cloud, model API, grants, assets, locations, and source documents are mapped for review.</p>
+        </article>
+        <article class="output-card">
+          <h3>Final review binder</h3>
+          <p>An advisor-facing index of approved facts, draft narratives, evidence, costs, privacy status, and open questions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section guardrail-section" id="guardrails" aria-labelledby="guardrail-title">
+      <div class="guardrail-copy">
+        <div class="eyebrow">Founder guardrails</div>
+        <h2 id="guardrail-title">Useful evidence support, not tax advice</h2>
+        <p>This operating system helps a startup preserve what happened and prepare materials for qualified review. It does not decide final eligibility, calculate a credit, promise a refund, file a claim, or replace a CPA or SR&amp;ED specialist.</p>
+      </div>
+      <div class="approval-list" aria-label="Human approval gates">
+        <div><strong>Technical lead</strong><span>Approves technical facts and experiment conclusions.</span></div>
+        <div><strong>Finance owner</strong><span>Approves source financial records and effort inputs.</span></div>
+        <div><strong>Privacy owner</strong><span>Approves redaction, export, and customer evidence handling.</span></div>
+        <div><strong>Advisor</strong><span>Reviews SR&amp;ED treatment, forms, expenditures, and open questions.</span></div>
+        <div><strong>Company officer</strong><span>Approves external handoff and final company positions.</span></div>
       </div>
     </section>
   </main>
 
-  <script src="./app.js?v=setup-gates"></script>
+  <footer class="site-footer">
+    <div>Volta SR&amp;ED operating system</div>
+    <div>Evidence first. Human reviewed. Advisor ready.</div>
+  </footer>
 </body>
 </html>
