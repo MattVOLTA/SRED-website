@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SR&ED Setup Dashboard</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="rainbow-rule"></div>
+
+  <header class="hero">
+    <div class="brand-row">
+      <img src="./assets/volta-logo-white.png" alt="Volta" class="brand-logo">
+      <div class="claim-period">14 day implementation plan</div>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">SR&ED operating system</div>
+        <h1>Setup dashboard</h1>
+        <p class="hero-lede">Inventory the evidence sources, connect priority systems, test the scan rhythm, and prepare a reviewed workspace for advisor input.</p>
+      </div>
+
+      <section class="progress-panel" aria-labelledby="overall-progress-label">
+        <div id="overall-progress-label" class="panel-label">Overall progress</div>
+        <div class="progress-value"><span id="complete-count">0</span><span class="progress-total">/ <span id="total-count">0</span> tasks</span></div>
+        <div class="progress-bar" aria-hidden="true">
+          <div id="overall-progress-fill" class="progress-fill"></div>
+        </div>
+        <div id="progress-note" class="progress-note">No tasks completed yet.</div>
+      </section>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="dashboard-band" aria-labelledby="dashboard-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Dashboard</div>
+          <h2 id="dashboard-title">Workstreams</h2>
+        </div>
+        <div class="actions">
+          <button id="show-all" type="button">All</button>
+          <button id="expand-all" type="button">Expand all</button>
+          <button id="collapse-all" type="button">Collapse all</button>
+          <button id="reset-progress" type="button" class="ghost-danger">Reset</button>
+        </div>
+      </div>
+      <div id="category-grid" class="category-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="days-band" aria-labelledby="days-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Plan</div>
+          <h2 id="days-title">Day by day execution</h2>
+        </div>
+        <div id="active-filter" class="active-filter">Showing all workstreams</div>
+      </div>
+      <div id="days-list" class="days-list"></div>
+    </section>
+
+    <section class="claim-band" aria-labelledby="claim-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Phase gates</div>
+          <h2 id="claim-title">What each checkpoint means</h2>
+        </div>
+      </div>
+      <div class="exit-grid">
+        <article>
+          <div class="exit-label">Setup handoff</div>
+          <p>Priority sources have owners, scopes, access methods, sensitivity rules, privacy paths, and visible blockers.</p>
+        </article>
+        <article>
+          <div class="exit-label">Testing proof</div>
+          <p>Daily and weekly scans run on approved sources, produce useful output, and record misses, noise, and privacy issues.</p>
+        </article>
+        <article>
+          <div class="exit-label">Advisor prep</div>
+          <p>Evidence, finance support, privacy decisions, approvals, and open advisor questions are visible before any handoff.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js?v=setup-gates"></script>
+</body>
+</html>
