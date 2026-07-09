@@ -130,13 +130,19 @@ p {
 
 .header-action {
   padding: 9px 14px;
-  border: 1px solid var(--card-border);
-  color: var(--fg-2);
-  background: var(--card);
+  border: 1px solid var(--volta-violet);
+  color: var(--fg-1);
+  background: #181818;
   white-space: nowrap;
 }
 
 .header-action:hover,
+.header-action:focus-visible {
+  border-color: var(--volta-violet);
+  background: var(--volta-violet);
+  color: var(--volta-white);
+}
+
 .button.secondary:hover {
   border-color: var(--volta-violet);
   background: #181818;
