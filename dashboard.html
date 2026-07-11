@@ -9,16 +9,24 @@
 <body>
   <div class="rainbow-rule"></div>
 
-  <header class="hero">
-    <div class="brand-row">
-      <img src="./assets/volta-logo-white.png" alt="Volta" class="brand-logo">
-      <div class="claim-period">14 day implementation plan</div>
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand-mark" href="./index.html" aria-label="Volta SR&amp;ED operating system">
+        <img src="./assets/volta-logo-white.png" alt="Volta">
+      </a>
+      <div class="claim-period">14-day implementation plan</div>
+      <a class="header-action" href="./index.html">Overview</a>
     </div>
+  </header>
 
-    <div class="hero-grid">
+  <section class="hero">
+    <div class="hero-shell">
       <div class="hero-copy">
-        <div class="eyebrow">SR&ED operating system</div>
-        <h1>Setup dashboard</h1>
+        <div class="badge-row">
+          <span class="badge-dot"></span>
+          <span class="badge">SR&amp;ED operating system</span>
+        </div>
+        <h1>Setup <span class="grad">dashboard</span></h1>
         <p class="hero-lede">Inventory the evidence sources, connect priority systems, test the scan rhythm, and prepare a reviewed workspace for advisor input.</p>
       </div>
 
@@ -31,7 +39,7 @@
         <div id="progress-note" class="progress-note">No tasks completed yet.</div>
       </section>
     </div>
-  </header>
+  </section>
 
   <main class="page-shell">
     <section class="dashboard-band" aria-labelledby="dashboard-title">
@@ -85,6 +93,15 @@
     </section>
   </main>
 
+  <script>
+    // Sticky header hairline on scroll
+    (function () {
+      var header = document.getElementById('siteHeader');
+      var onScroll = function () { header.classList.toggle('stuck', window.scrollY > 8); };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>
   <script src="./app.js?v=setup-gates"></script>
 </body>
 </html>
