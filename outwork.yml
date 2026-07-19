@@ -1,0 +1,14 @@
+version: 1
+kind: project
+project: sred-website
+harnesses:
+  claude: true
+  codex: true
+  opencode: false
+# No secrets, databases, or MCP servers: this is a static marketing/dashboard
+# site (plain HTML/CSS/JS, localStorage only). Deployment credentials
+# (NETLIFY_AUTH_TOKEN / NETLIFY_SITE_ID) live in GitHub Actions repo secrets
+# and are never delivered to local sessions.
+secrets: []
+databases: []
+mcps: []
